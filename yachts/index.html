@@ -47,14 +47,15 @@ app.config{function($routeProvider) {
     controller: "CustomersController",
     templateUrl: 'app/views/customers.html'
   })
-  .when['/orders/',
+  .when('/orders/',
 {
 controller: "OrdersController",
-templateUrl: 'app/views/orders.html'
+templateUrl: '/app/views/orders.html'
 }]
 ));
 
-app.controller('OrdersController', function($scope) {
+app.controller('OrdersController', function($scope){
+  $scope.customerID = 5;
 });
 
     app.controller('CustomersController', function($scope) {
